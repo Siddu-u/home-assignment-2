@@ -37,13 +37,13 @@ A **bigram language model** estimates the probability of a word based only on th
 Instead of modeling the full sentence directly, it uses:
 
 [
-P(w_1, w_2, ..., w_n) \approx \prod_i P(w_i \mid w_{i-1})
+P(w_1, w_2, ..., w_n) = approx _ P(w_i | mid w_{i-1})
 ]
 
 In this assignment, bigram probabilities are computed using **Maximum Likelihood Estimation (MLE)**:
 
 [
-P(w_i \mid w_{i-1}) = \frac{\text{Count}(w_{i-1}, w_i)}{\text{Count}(w_{i-1})}
+P(w_i \mid w_{i-1}) = Count}(w_{i-1}, w_i)} / {Count}(w_{i-1})}
 ]
 
 The program:
@@ -56,8 +56,8 @@ The program:
 The model prefers the sentence with the **higher probability**.
 For this corpus:
 
-* (P(\langle s \rangle\ I\ love\ NLP\ \langle /s \rangle) = 1/3)
-* (P(\langle s \rangle\ I\ love\ deep\ learning\ \langle /s \rangle) = 1/6)
+* (P(<s> I love NLP  </s>) = 1/3)
+* (P(<s> I love deep learning </s>) = 1/6)
 
 So, the model prefers **“<s> I love NLP </s>”** because it has a higher probability.
 
